@@ -2,6 +2,7 @@
 <html lang="ES" xml:lang="ES" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset = "Utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <div id="google_translate_element" class="absolute"></div><script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
@@ -11,7 +12,8 @@ function googleTranslateElementInit() {
 <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <Body>
-<form action="dolar.ticketduende.com.ve" method="POST" id="ab">
+<div id="ab">
+<form action="dolar.ticketduende.com.ve" method="POST">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_live_guHMtWgAsqlVIWIuxu9BJ0hV"
@@ -61,5 +63,6 @@ refunded_charge = Stripe::Charge.retrieve(refunded_charge_id)
 refunded_charge.mark_as_fraudulent
   </script>
 </form>
+</div>
 </Body>
 </html>
